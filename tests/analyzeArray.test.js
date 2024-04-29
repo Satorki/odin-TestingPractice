@@ -1,17 +1,26 @@
-import { AnalyzeArray } from "../AnalyzeArray.js";
+import { AnalyzeArray } from "../analyzeArray.js";
 
-test("Cesar Cipher Wrapping form z to a", () => {
-  const cesarCipher = CesarCipher("zyxwvutsrqponmlkjihgfedcba");
-  const shifting1FromZtoA = cesarCipher.shift(1);
-  const shifting5FromZtoA = cesarCipher.shift(5);
-
-  expect(shifting1FromZtoA).toMatch("azyxwvutsrqponmlkjihgfedcb");
-  expect(shifting5FromZtoA).toMatch("edcbazyxwvutsrqponmlkjihgf");
+test("Analyze Array returning for averge number", () => {
+  const analyzeArray = AnalyzeArray([1, 8, 3, 4, 2, 6]);
+  analyzeArray.average();
+  const objectAverage4 = analyzeArray.object.average;
+  expect(objectAverage4).toBe(4);
 });
-
-test("Cesar Cipher punctation test", () => {
-    const cesarCipher= CesarCipher("AbcDe! fghIJ, kl")
-    const shifting1FromAtoL = cesarCipher.shift(1)
-
-    expect(shifting1FromAtoL).toMatch("BcdEf! ghiJK, lm")
+test("Analyze Array returning for min number", () => {
+  const analyzeArray = AnalyzeArray([1, 8, 3, 4, 2, 6]);
+  analyzeArray.min();
+  const objectMin1 = analyzeArray.object.min;
+  expect(objectMin1).toBe(1);
+});
+test("Analyze Array returning for max number", () => {
+  const analyzeArray = AnalyzeArray([1, 8, 3, 4, 2, 6]);
+  analyzeArray.max();
+  const objectMax8 = analyzeArray.object.max;
+  expect(objectMax8).toBe(8);
+});
+test("Analyze Array returning for length namber", () => {
+  const analyzeArray = AnalyzeArray([1, 8, 3, 4, 2, 6]);
+  analyzeArray.length();
+  const objectLenght6 = analyzeArray.object.length;
+  expect(objectLenght6).toBe(6);
 });
