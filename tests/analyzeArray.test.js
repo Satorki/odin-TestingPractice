@@ -1,4 +1,4 @@
-import { CesarCipher } from "../cesarCipher.js";
+import { AnalyzeArray } from "../AnalyzeArray.js";
 
 test("Cesar Cipher Wrapping form z to a", () => {
   const cesarCipher = CesarCipher("zyxwvutsrqponmlkjihgfedcba");
